@@ -1,0 +1,156 @@
+
+
+
+<section id="create-page" class="auth">
+  <form id="create" #form="ngForm" (ngSubmit)="addFurniture(form)">
+      <div class="container">
+          <div class="furniture-logo"></div>
+          <h1>Add furniture</h1>
+          
+
+          <label for="category">Category:</label>
+          <input type="text" 
+          id="category" 
+          name="category" 
+          placeholder="Enter  category..."
+          ngModel
+          #inputCategory="ngModel"
+        required
+        minlength="4"
+          >
+          @if(inputCategory?.touched){
+              <div>
+                @if(inputCategory?.errors?.['required']){
+                <p class="error">Furniture category is required.</p>
+                }
+                <!---->
+                @if(inputCategory?.errors?.['minlength']){
+                <p class="error">Furniture category must be at least 4 characters long.</p>
+                }
+              </div>
+              }
+
+          <label for="condition">Condition:</label>
+          <input type="text" id="condition" name="condition" placeholder="Enter  condition..."
+          ngModel
+        #inputCondition="ngModel"
+        required
+        minlength="4">
+          @if(inputCondition?.touched){
+              <div>
+                @if(inputCondition?.errors?.['required']){
+                <p class="error">Condition is required.</p>
+                }
+                <!---->
+                @if(inputCondition?.errors?.['minlength']){
+                <p class="error">Condition must be at least 4 characters long.</p>
+                }
+              </div>
+              }
+
+          <label for="delivery">Delivery is handled by:</label>
+          <input type="text" id="delivery" name="delivery" placeholder="Enter  delivery..."
+          ngModel
+        #inputDelivery="ngModel"
+        required
+        minlength="5">
+
+          @if(inputDelivery?.touched){
+              <div>
+                @if(inputDelivery?.errors?.['required']){
+                <p class="error">Delivery is required.</p>
+                }
+                <!---->
+                @if(inputDelivery?.errors?.['minlength']){
+                <p class="error">Delivery must be at least 5 characters long.</p>
+                }
+              </div>
+              }
+
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter  location..."
+          ngModel
+        #inputLocation="ngModel"
+        required
+        minlength="3">
+
+          @if(inputLocation?.touched){
+              <div>
+                @if(inputLocation?.errors?.['required']){
+                <p class="error">Location is required.</p>
+                }
+                <!---->
+                @if(inputLocation?.errors?.['minlength']){
+                <p class="error">Location must be at least 3 characters long.</p>
+                }
+              </div>
+              }
+
+          <label for="number">Phone Number:</label>
+          <input type="text" id="number" name="phone"  placeholder="....."
+          ngModel
+        #inputPhone="ngModel"
+        required
+        minlength="9">
+          @if(inputPhone?.touched){
+              <div>
+                @if(inputPhone?.errors?.['required']){
+                <p class="error">Phone number  is required.</p>
+                }
+                <!---->
+                @if(inputPhone?.errors?.['minlength']){
+                  <p class="error">Phone must be at least 9 characters long.</p>
+                  }
+              </div>
+              }
+
+          <label for="imageUrl">Image:</label>
+          <input type="text" id="imageUrl" name="imageUrl" placeholder="Upload a photo..."
+          ngModel
+        #inputImageUrl="ngModel"
+        required
+        appImageUrlValidator
+        minlength="5">
+          @if(inputImageUrl?.touched){
+              <div>
+                @if(inputImageUrl?.errors?.['required']){
+                <p class="error"> Image is required.</p>
+                }
+                <!---->
+              </div>
+              @if(inputImageUrl?.errors?.['urlValidator']){
+                <div class="error">
+                  <p>Invalid image URL format.</p>
+                </div>
+                }
+              }
+
+          <label for="summary">Summary:</label>
+          <textarea name="summary" id="summary"
+          ngModel
+          rows="8"
+        #inputSummary="ngModel"
+        required
+        minlength="10"></textarea>
+        @if(inputSummary?.touched){
+          <div>
+            @if(inputSummary?.errors?.['required']){
+            <p class="error">The field with your summary is required.</p>
+            }
+            <!---->
+            @if(inputSummary?.errors?.['minlength']){
+            <p class="error">Text must be at least 10 characters long.</p>
+            }
+          </div>
+          }
+
+          @if (hasError) {
+            <app-error-msg />
+            }
+          <input
+          class="public"
+        [disabled]="form.invalid"
+        [style]="{ backgroundColor: form.invalid ? 'red' : '#235' }" class="btn submit" type="submit" value="Create Furniture">
+      </div>
+  </form>
+</section>

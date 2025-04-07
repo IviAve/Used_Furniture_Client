@@ -1,0 +1,271 @@
+
+
+/* .auth {
+  width: 100px;
+  margin: 8em auto;
+}
+
+header
+ {
+  background-color: #777f8d;
+  width: 100%;
+  overflow: hidden;
+  color: white;
+}
+
+.home,
+.about,
+.profile {
+  font-size: auto;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header {
+  position: relative;
+  padding: 10px;
+}
+
+header h1 {
+  display: inline-block;
+  background-color: #5e636b;
+  color: white;
+  margin-bottom: auto;
+}
+
+header nav {
+  font-size: auto;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  position: absolute;
+  right: 0;
+  bottom: 8px;
+}
+
+header nav>* {
+  float: left;
+}
+
+
+
+nav a {
+  margin: 0 0.5em;
+}
+
+nav a:hover {
+  cursor: pointer;
+  color: black;
+  font-weight: bolder;
+}
+
+.home:hover {
+  color: black;
+}
+
+#user,
+#guest {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.top-bar {
+  background-color: #553232;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 16px;
+}
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+h1 .highlight {
+  color: #FF6347; 
+  font-size: 40px; 
+}
+
+
+.logo {
+  margin-right: 10px;
+  max-height: 70px;
+  padding: 5px;
+  padding-left: 20px;
+  position: relative;
+  top: 22px;
+  
+} */
+
+
+.auth {
+  width: 100px;
+  margin: 8em auto;
+}
+
+header {
+  background-color: #777f8d;
+  width: 100%;
+  overflow: hidden;
+  color: white;
+}
+
+.home,
+.about,
+.profile {
+  font-size: auto;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header {
+  position: relative;
+  padding: 10px;
+}
+
+header h1 {
+  display: inline-block;
+  background-color: #5e636b;
+  color: white;
+  margin-bottom: auto;
+}
+
+header nav {
+  font-size: auto;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  position: absolute;
+  right: 0;
+  bottom: 8px;
+}
+
+header nav > * {
+  float: left;
+}
+
+nav a {
+  margin: 0 0.5em;
+}
+
+nav a:hover {
+  cursor: pointer;
+  color: black;
+  font-weight: bolder;
+}
+
+.home:hover {
+  color: black;
+}
+
+#user,
+#guest {
+  margin: 0;
+  padding: 0;
+}
+
+.top-bar {
+  background-color: #553232;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Styling for the span inside h1 */
+h1 .highlight {
+  color: #FF6347; /* Red color for the word "Free" */
+  font-size: 40px; /* Slightly larger font size for the "Free" word */
+}
+
+.logo {
+  margin-right: 10px;
+  max-height: 70px;
+  padding: 5px;
+  padding-left: 20px;
+  position: relative;
+  top: 22px; /* Измести иконката надолу с 10px */
+}
+
+/* Dropdown menu styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: relative;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  z-index: 1;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 8px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 600px) {
+  header {
+    padding: 10px 0;
+  }
+
+  header nav {
+    position: relative;
+    text-align: center;
+    display: block;
+    padding-top: 10px;
+  }
+
+  header nav > * {
+    float: none;
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .logo {
+    max-height: 50px;
+    padding-left: 0;
+    top: 10px;
+  }
+
+  .dropdown-content {
+    position: relative;
+    background-color: #f1f1f1;
+    min-width: 100%;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .dropdown-content a {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+}

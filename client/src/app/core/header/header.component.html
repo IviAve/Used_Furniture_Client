@@ -1,0 +1,75 @@
+
+
+
+<!-- html with @if -->
+
+<!-- <header>
+  <div id="box">
+    <div class="top-bar">
+      <h1><span class="highlight">Free</span> Used Furniture</h1>
+    </div>
+    
+    <img src="sofa.png" alt="sofa" class="logo" />
+    <h1><a class="home" routerLink="/home">Furniture</a></h1>
+    
+    <nav>
+      <a routerLink="/catalog-transport">transport-services catalog</a>
+      <a routerLink="/catalog-furniture">Furniture catalog</a>
+      @if (isLoggedIn) {
+        <a class="profile" routerLink="/profile">{{ username }}'s Profile</a>
+        <a (click)="logout()">Logout</a>
+
+        <div id="user">
+          <a routerLink="/add-furniture">Add free furniture</a>
+          <a routerLink="/add-transport">Add transport-services</a>
+          <a class="about" routerLink="/about-us">About Us</a>
+        </div>
+      } @else {
+        
+        <div id="guest">
+          <a class="about" routerLink="/about-us">About Us</a>
+          <a routerLink="/login">Login</a>
+          <a routerLink="/register">Register</a>
+        </div>
+      }
+    </nav>
+  </div>
+</header> -->
+
+
+<header>
+  <div id="box">
+    <div class="top-bar">
+      <h1><span class="highlight">Free</span> Used Furniture</h1>
+    </div>
+    
+    <img src="sofa.png" alt="sofa" class="logo" />
+    <h1><a class="home" routerLink="/home">Furniture</a></h1>
+    
+    <nav>
+      <a class="about" routerLink="/about-us">About Us</a>
+      <a routerLink="/catalog-transport">Transport-services catalog</a>
+      <a routerLink="/catalog-furniture">Furniture catalog</a>
+      
+      <!-- Dropdown menu for logged-in users -->
+      @if (isLoggedIn) {
+        <div class="dropdown">
+          <a class="profile" routerLink="/profile">{{ username }}'s Profile</a>
+          <a (click)="logout()">Logout</a>
+          <div class="dropdown-content">
+            <a routerLink="/add-furniture">Add free furniture</a>
+            <a routerLink="/add-transport">Add transport-services</a>
+            
+          </div>
+        </div>
+      } @else {
+        <!-- Guest menu -->
+        <div id="guest">
+          <a class="about" routerLink="/about-us">About Us</a>
+          <a routerLink="/login">Login</a>
+          <a routerLink="/register">Register</a>
+        </div>
+      }
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,83 @@
+@if (isLoading) {
+    <app-loader />
+    }
+    @else {
+
+<section id="transport-services-details">
+    <h1>Details</h1>
+    <div class="info-section">
+
+        <div class="transport-services-header">
+            <img class="transport-servicesImage" src="{{transport.imageUrl}}" alt="{{transport.type}}" />
+            <div>
+                <!-- Display furniture details -->
+                <h1>{{ transport.name }}</h1>
+                <h3>{{ transport.type }}</h3>
+                <h3>{{ transport.capacity }}</h3>
+                <h3>{{ transport.price }}</h3>
+                <h3>{{ transport.location }}</h3>
+                <h3>{{ transport.phone }}</h3>
+                <h3>{{ transport.summary }}</h3>
+          
+                <!-- Display the created and updated dates -->
+                <p><strong>Created:</strong> <time>{{ transport.createdAt |  date : "yyyy-mm-dd-hh:mm:ss"}}</time></p>
+                <p><strong>Updated:</strong> <time>{{ transport.updatedAt |  date : "yyyy-mm-dd-hh:mm:ss"}}</time></p>
+            </div>
+        
+        <p class="user"><b>Publish by:</b> <span>{{ transport.userId.username | uppercase }}</span></p>
+         <p class="liked"><b>Likes:</b> <span> {{ transport.subscribers.length || 0 }}</span></p>
+        </div>
+        
+        @if (hasError) {<app-error-msg />}
+
+        <!-- Display Comments Section -->
+        <!-- @if (comments.length > 0) {
+            <div class="details-comments">
+                <h2>Comments:</h2>
+                <ul>
+                    
+                    @for (comment of comments; track $index) {
+                        <li class="comment">
+                            <p><strong>{{ comment.userId.username }}</strong>: {{ comment.content }}</p>
+                        </li>
+                    }
+                </ul>
+            </div>
+        } @else {
+            
+            <p class="no-comment">No comments.</p>
+        } -->
+
+        <!-- Buttons for Edit/Delete (only for owner) -->
+        @if (isLoggedIn && isOwner) {
+            <div class="buttons">
+                <a routerLink="/edit-transport/{{transport._id}}" class="button">Edit</a>
+                <a class="button" (click)="delete()">Delete</a>
+            </div>
+        }  @else {
+            @if (isLoggedIn && !isLiked) {
+              <button type="button" class="button" (click)="onLike($event)">Like</button>
+            }
+        }
+        <!-- Add Comment Section (only for logged-in users who are not the owner) -->
+        <!-- @if (isLoggedIn && !isOwner) {
+            <article class="create-comment">
+                <label>Add new comment:</label>
+                <p><span>{{ username }}</span> comment:</p>
+                <form class="form" (submit)="addComment($event)">
+                    <textarea 
+                        
+                        name="comment" 
+                        placeholder="Comment......"
+                        required>
+                    </textarea>
+                    <input class="btn submit" type="submit" value="Add Comment">
+                </form>
+            </article>
+        } -->
+
+
+
+    </div>
+</section>
+    }

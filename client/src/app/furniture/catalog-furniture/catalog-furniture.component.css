@@ -1,0 +1,164 @@
+
+.no-articles {
+  color: rgb(24, 10, 10);
+  text-align: center;
+  font-weight: 700;
+  font-size: 60px;
+  font-family: "Agency FB", sans-serif;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+
+#catalog-furniture {
+  background-color: transparent;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+  height: auto;
+  width: 90%; 
+  max-width: 900px;
+  margin: 0 auto; 
+  border-radius: 8px; 
+}
+
+
+#catalog-furniture > h1 {
+  color: #fff;
+  font-family: "Agency FB", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  margin-top: 10px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+.allFurnits {
+  background-color: #f3f0ec;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row; 
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 8px; 
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.allFurnits-info {
+  padding: 20px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column; 
+}
+
+
+.allFurnits-info > img {
+  margin-top: -10px;
+  height: 140px;
+  width: 140px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  padding: 5px;
+  border-radius: 50%; 
+  border: 2px solid #ddd; 
+}
+
+.allFurnits-info > h6, .allFurnits-info > h2 {
+  font-size: 18px;
+  font-weight: 750;
+  color: #161618;
+  margin: 5px 0;
+}
+
+
+
+
+.allFurnits, .allFurnits-info, .details-button {
+  border-radius: 8px;
+}
+
+
+@media (max-width: 768px) {
+  #catalog-furniture {
+    width: 100%;
+  }
+
+  .allFurnits {
+    flex-direction: column; 
+    align-items: center;
+    width: 70%;
+      position: relative;
+      margin-left: 40px;
+  }
+
+  .allFurnits-info > img {
+    position: relative;
+    margin: 0;
+    max-width: 200px;  
+      height: 120px; 
+      object-fit: cover; 
+      margin-bottom: 35px;
+      border-radius: 10px;
+      margin-left: 40px;
+  }
+
+  .details-button {
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .allFurnits-info {
+    display: flex;
+      flex-direction: column;
+      align-items: center; 
+  }
+}
+
+
+.details-button {
+  background-color: #2A265F;
+  color: #fff;
+  font-size: 18px;
+  padding: 12px 20px;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+  margin: 20px auto; 
+  display: block; 
+  width: auto; 
+  max-width: 200px; 
+}
+
+
+.details-button:hover {
+  background-color: #1a1c4d;
+  cursor: pointer;
+}
+
+.user b, .liked b {
+  color: rgb(255, 153, 0); 
+  font-weight: bold;
+}
+
+.user span, .liked span {
+  color: #555; 
+}
+
+.user {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.liked {
+  margin-top: 5px;
+}

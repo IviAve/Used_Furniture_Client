@@ -1,0 +1,185 @@
+#catalog-transport-servicess {
+    background-color: transparent;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+    height: auto;
+    width: 90%; /* Увеличавам ширината, за да изглежда по-добре на различни устройства */
+    max-width: 900px;
+    margin: 0 auto; /* Центрирам контейнера */
+    border-radius: 8px; /* Добавям малки заоблени ъгли */
+}
+
+#catalog-transport-servicess:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+}
+
+#catalog-transport-servicess > h1 {
+    color: #fff;
+    font-family: "Agency FB", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    margin-top: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.alltransport-servicess {
+    background-color: #f3f0ec;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row; /* Поставяме съдържанието в ред */
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 8px; /* Заоблени ъгли за всеки елемент */
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.alltransport-servicess:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.alltransport-servicess-info {
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Разпределяме съдържанието вертикално */
+}
+
+.alltransport-servicess-info > img {
+    margin-top: -10px;
+  height: 140px;
+  width: 140px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  padding: 5px;
+  border-radius: 50%; /* Закръгляме снимката */
+  border: 2px solid #ddd; /* Добавяме лека рамка около снимката */
+}
+
+.alltransport-servicess-info > h6 {
+    font-size: 18px;
+  font-weight: 750;
+  color: #161618;
+  margin: 5px 0;
+}
+
+.alltransport-servicess-info > h2 {
+    font-size: 18px;
+  font-weight: 750;
+  color: #161618;
+  margin: 5px 0;
+}
+
+.details-button {
+    background-color: #2A265F;
+  color: #fff;
+  font-size: 18px;
+  padding: 12px 20px;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+  margin: 20px auto; /* Центрираме бутона по хоризонтала */
+  display: block; /* Правим бутона блоков елемент, за да се подреди централно */
+  width: auto; /* Задаваме автоматична ширина, за да не е прекалено широк */
+  max-width: 200px; /* Ограничаваме максималната ширина на бутона */
+}
+
+.details-button:hover {
+    background-color: #1a1c4d;
+  cursor: pointer;
+}
+
+.no-articles {
+    color: rgb(23, 9, 9);
+  text-align: center;
+  font-weight: 700;
+  font-size: 60px;
+  font-family: "Agency FB", sans-serif;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+
+/* @media (max-width: 768px) {
+    #catalog-furniture {
+      width: 100%;
+    }
+  
+    .alltransport-servicess {
+      flex-direction: column; 
+      align-items: center;
+    }
+  
+    .alltransport-servicess-info > img {
+      position: relative;
+      margin: 0;
+      max-width: 120px;
+    }
+  
+    .details-button {
+      font-size: 16px;
+      width: 100%;
+      text-align: center;
+      margin-top: 15px;
+    }
+  }
+
+
+
+
+ 
+
+.alltransport-servicess, .alltransport-servicess-info, .details-button {
+  border-radius: 8px;
+} */
+
+
+
+@media (max-width: 768px) {
+  #catalog-furniture {
+      width: 100%;
+  }
+
+  .alltransport-servicess {
+      flex-direction: column; 
+      align-items: center;
+      width: 70%;
+      position: relative;
+      margin-left: 40px;
+  }
+
+  .alltransport-servicess-info > img {
+      position: relative;
+      margin: 0;
+      max-width: 200px;  
+      height: 120px; 
+      object-fit: cover; 
+      margin-bottom: 35px;
+      border-radius: 10px;
+      margin-left: 40px;
+      
+  }
+
+  .details-button {
+      font-size: 14px; 
+      width: 100%;
+      text-align: center;
+      margin-top: 15px;
+  }
+
+  
+  .alltransport-servicess-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+  }
+}

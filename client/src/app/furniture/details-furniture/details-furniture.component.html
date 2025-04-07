@@ -1,0 +1,100 @@
+
+@if (isLoading) {
+  <app-loader />
+  }
+  @else {
+<section id="furniture-details">
+    <h1>Details</h1>
+    <div class="info-section">
+      <div class="furniture-header">
+        <!-- Corrected the syntax for image binding -->
+        <img class="furnitureImage" src="{{furniture.imageUrl}}" alt="{{furniture.category}}" />
+  
+       
+  <div>
+        <!-- Display furniture details -->
+        <h1>{{ furniture.category }}</h1>
+        <h3>{{ furniture.condition }}</h3>
+        <h3>{{ furniture.delivery }}</h3>
+        <h3>{{ furniture.location }}</h3>
+        <h3>{{ furniture.phone }}</h3>
+        <h3>{{ furniture.summary }}</h3>
+  
+        <!-- Display the created date -->
+          <!-- Display the created and updated dates -->
+
+  <p><strong>Created:</strong> <time>{{ furniture.createdAt |  date : "yyyy-mm-dd-hh:mm:ss" }}</time></p>
+  <p><strong>Updated:</strong> <time>{{ furniture.updatedAt  |  date : "yyyy-mm-dd-hh:mm:ss"}}</time></p>
+</div>
+<p class="user"><b>Publish by:</b> <span> {{ furniture.userId.username | uppercase}}</span></p>
+ <p class="liked"><b>Likes:</b> <span> {{ furniture.subscribers.length || 0 }}</span></p>
+</div>
+@if (hasError) {<app-error-msg />}
+<!-- comment  -->
+
+<!-- @for (comment of furniture.comments; track $index) {
+  <div class="comment">
+    <header class="header">
+      <p>
+         <span>{{ comment.userId.username }}</span> posted on 
+         <time>{{ comment.created_at }}</time> 
+      </p>
+    </header>
+    <div class="comment-main">
+      <div class="userdetails">
+        <img src="./profile.png" alt="avatar" />
+      </div>
+      <div class="post-content">
+        <p>
+           {{ comment.text }} 
+        </p>
+      </div>
+    </div>
+    <div class="footer">
+      
+    </div>
+  </div>
+} @if(isLoggedIn){
+  <div class="answer-comment">
+    <p>
+      <span>{{ username }}</span> comment:
+    </p>
+    <div class="answer">
+      <form>
+        <textarea name="postText" id="comment" cols="30" rows="10"></textarea>
+        <button>Post</button>
+      </form>
+    </div>
+  </div>
+  } -->
+
+
+
+
+
+       <!-- Edit/Delete buttons ( Only for creator of this game )  -->
+       @if (isLoggedIn && isOwner) {
+       <div class="buttons">
+        <a routerLink="/edit-furniture/{{furniture._id}}" class="button">Edit</a>
+        
+        <a  class="button" (click)="delete()">Delete</a>
+    </div>
+  } @else {
+    @if (isLoggedIn && !isLiked) {
+      <button type="button" class="button" (click)="onLike($event)">Like</button>
+    }
+  }
+
+    </div>
+  </section>
+}
+
+
+
+
+
+
+
+
+
+

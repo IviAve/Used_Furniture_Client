@@ -1,0 +1,34 @@
+/* footer  */
+
+footer {
+  padding: 0.5em;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+footer {
+  background-color: #656060;
+  /*color: wheat;*/
+  font-weight: bolder;
+  font-weight: 100;
+  letter-spacing: 5px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap; /* Разрешава на текста да се свива */
+  overflow: hidden; /* Скрива текста, който не се побира в контейнера */
+  text-align: center; /* Центрира текста */
+}
+
+footer p {
+  word-wrap: break-word; /* Позволява разбиването на дълги думи */
+  margin: 0; /* Премахва маргините */
+}

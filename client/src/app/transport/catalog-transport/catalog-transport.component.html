@@ -1,0 +1,47 @@
+
+        <h1>All transport-services</h1>
+        <!-- <main id="main-content"> -->
+        
+        
+        <section id="catalog-transport-servicess">
+        
+            @if (hasError) {
+                <app-error-msg />
+                }
+                <!-- -->
+                @else if (isLoading) {
+                <app-loader />
+                }
+                <!-- -->
+                @else {
+                    
+            @if (transports.length > 0 ) {
+            @for (transport of transports; track $index) {
+        
+            <!-- Display div: with information about every game (if any) -->
+            <div class="alltransport-servicess">
+                <div class="alltransport-servicess-info">
+                    <img src={{transport.imageUrl}} alt="{{transport.type}}">
+                    <!-- <h6><a [routerLink]="transport._id" class="normal"></a></h6> -->
+                    <h2>{{transport.name}}</h2>
+                    <h2>{{transport.type}}</h2>
+                    <h2>{{transport.location}}</h2>
+                    <p class="liked"><b>Likes:</b> <span> {{ transport.subscribers.length || 0 }}</span></p>
+                    <!-- <a [routerLink]="furniture._id" class="details-button">Details</a> -->
+                    <a routerLink='/transports/{{transport._id}}' class="details-button">Details</a>
+        
+                </div>
+        
+            </div>
+            }
+        
+            }
+        
+            <!-- Display paragraph: If there is no games  -->
+            @else {
+            <h3 class="no-articles">No transport-services yet</h3>
+            }
+            }
+        </section>
+        
+        <!-- </main> -->

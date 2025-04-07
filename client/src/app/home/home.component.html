@@ -1,0 +1,48 @@
+<section id="welcome-people">
+    <div class="welcome-message">
+      <h2>"Trash for one, treasure for another one"</h2>
+    </div>
+  
+    <div id="home-page">
+      <h1 [@typing] class="typing-text">Latest Used Furniture</h1>
+  
+      @if (hasError) {
+        <app-error-msg />
+      }
+       <!-- -->
+      @else if (isLoading) {
+        <app-loader />
+      }
+      <!-- -->
+
+      @else {
+       
+          @if (furnitures.length > 0) {
+            @for (furniture of furnitures; track $index) {
+             <div class="home-furniture">
+              <div class="image-wrap">
+              
+                <img src="{{ furniture.imageUrl }}" alt="{{furniture.category}}">
+              </div>
+                <h2>{{ furniture.category }}</h2>
+                <h2>{{ furniture.location }}</h2>
+                <h2>{{ furniture.condition }}</h2>
+  
+                <div class="data-btns">
+                  <a [routerLink]="['/furnitures', furniture._id]" class="btn details-btn">Details</a>
+                </div>
+              </div>
+            
+            }
+            <!-- -->
+            
+        }
+        <!-- -->
+          @else {
+            <p class="no-articles">No used furniture yet</p>
+          }
+        
+      }
+    </div>
+  </section>
+  

@@ -1,0 +1,80 @@
+<!-- homepage -->
+
+
+<section id="login-page" class="auth">
+  <form id="login" #form="ngForm" (ngSubmit)="login(form)">
+     
+      <div class="container">
+          <div class="brand-logo"></div>
+          <h1>Login</h1>
+          <!-- <label for="userName">username:</label>
+          <input type="text" id="userName" name="userName" placeholder="....."> -->
+
+          
+          
+
+          <label for="email">Email:</label>
+          <input
+          [class]="(
+            (inputEmail?.touched && inputEmail?.errors?.['required']) || 
+             (inputEmail?.touched && inputEmail?.errors?.['emailValidator']))
+             ? 'input-error': ''"
+           type="email" id="email" name="email" placeholder="....."
+           ngModel
+           #inputEmail="ngModel"
+           required
+           [appEmail]="domains">
+
+           @if(inputEmail?.touched){
+            <div>
+              @if(inputEmail?.errors?.['required']){
+              <p class="error">Email is required!</p>
+              }
+              <!--  -->
+              @if(inputEmail?.errors?.['emailValidator']){
+              <p class="error">Email is not valid!</p>
+              }
+            </div>
+            }
+
+          <label for="login-pass">Password:</label>
+
+          <input 
+          [class]="(
+          (inputPassword?.touched && inputPassword?.errors?.['required']) || 
+           (inputPassword?.touched && inputPassword?.errors?.['minlength']))
+           ? 'input-error': ''"
+          type="password" id="login-password" name="password"
+          placeholder="*******"
+          ngModel
+          #inputPassword="ngModel"
+          minlength="5"
+          required>
+
+          @if(inputPassword?.touched){
+            <div>
+              @if(inputPassword?.errors?.['required']){
+              <p class="error">Password is required!</p>
+              }
+              <!--  -->
+              @if(inputPassword?.errors?.['minlength']){
+              <p class="error">Password must be at least 5 characters!</p>
+              }
+            </div>
+            }
+
+          <input
+          [disabled]="form.invalid"
+        [style]="{ backgroundColor: form.invalid ? 'red' : '#235' }" 
+          type="submit" class="btn submit" value="Login">
+
+          <p class="field">
+              <span>If you don't have profile click <a routerLink="/register" style="color: red;">here</a></span>
+          </p>
+      </div>
+      @if (hasError) {
+        <app-error-msg />
+        }
+  </form>
+  
+</section>
