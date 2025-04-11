@@ -4,5 +4,5 @@
 
 
 export const environment = {
-  apiUrl: 'https://used-furniture-server-919793127929.europe-west4.run.app/api',
+  apiUrl: 'https://used-furniture-server-817279306338.europe-west4.run.app/api',
 };
