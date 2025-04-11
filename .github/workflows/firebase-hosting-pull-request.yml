@@ -17,5 +17,5 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_GLOSSY_PRECINCT_456113_U6 }}
-          projectId: glossy-precinct-456113-u6
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_USED_FURNITURE_680BE }}
+          projectId: used-furniture-680be
