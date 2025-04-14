@@ -2,8 +2,8 @@ import { ValidatorFn } from "@angular/forms";
 
 
 export function imageUrlValidator(): ValidatorFn {
-    //const regex = /^https:\/\/[a-zA-Z0-9\-._~:\/?#\[\]@!$&'()*+,;=%]+$/
-    const regex = /^https?:\/\//;
+    const regex =/^(https?:\/\/.*\.(?:png|jpg|jpeg|gif))$/i;
+    // const regex = /^https?:\/\//;
 
     return (control) => {
         const isInvalid = control.value === '' || regex.test(control.value);
