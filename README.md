@@ -2,6 +2,8 @@
 
 This is an Angular 18-based client application.
 
+deploy : https://used-furniture-680be.web.app/#/home
+
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
