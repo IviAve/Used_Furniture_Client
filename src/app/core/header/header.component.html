@@ -47,11 +47,11 @@
     <h1><a class="home" routerLink="/home">Furniture</a></h1>
     
     <nav>
-      <a class="about" routerLink="/about-us">About Us</a>
+      
       <a routerLink="/catalog-transport">Transport-services catalog</a>
       <a routerLink="/catalog-furniture">Furniture catalog</a>
       
-      <!-- Dropdown menu for logged-in users -->
+      
       @if (isLoggedIn) {
         <div class="dropdown">
           <a class="profile" routerLink="/profile">{{ username }}'s Profile</a>

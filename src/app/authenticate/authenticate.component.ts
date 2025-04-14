@@ -5,7 +5,7 @@ import { LoaderComponent } from '../shared/loader/loader.component';
 @Component({
   selector: 'app-authenticate',
   standalone: true,
-  imports: [LoaderComponent, LoaderComponent],
+  imports: [LoaderComponent],
   templateUrl: './authenticate.component.html',
   styleUrl: './authenticate.component.css',
 })
