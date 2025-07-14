@@ -157,3 +157,18 @@ p.error {
 .border-error {
   border-color: red !important;
 }
+
+
+@media (max-width: 590px) {
+  #login-page {
+    width: 500px;
+  
+  };
+  #register-page {
+    width: 420px;
+  }
+  label {
+    width: 110%;
+  }
+ 
+}

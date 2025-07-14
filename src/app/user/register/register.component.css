@@ -267,3 +267,14 @@ p.error {
   border-left-color: red;
   border-color: red;
 }
+
+@media (max-width: 590px) {
+  
+  #register-page {
+    width: 420px;
+    
+  }
+  label {
+    width: 120%;
+  }
+}

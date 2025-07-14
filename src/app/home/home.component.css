@@ -194,3 +194,14 @@ h1 {
   0%, 100% { border-color: transparent; }
   50% { border-color: #000; }
 }
+
+@media (max-width: 590px) {
+  .home-furniture {
+    margin-left: 0;
+   
+  }
+  #home-page>h1 {
+    font-size: 30px;
+  }
+  
+}
