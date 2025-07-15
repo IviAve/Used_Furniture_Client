@@ -2,7 +2,8 @@
 
 #login-page {
   position: relative;
-  width: 650px;
+  width: 100%;
+  max-width: 650px;
   height: auto;
   border-radius: 20px;
   padding: 40px;
@@ -13,7 +14,8 @@
 
 #register-page {
   position: relative;
-  width: 650px;
+  width: 100%;
+  max-width: 650px;
   height: auto;
   border-radius: 20px;
   padding: 40px;
@@ -159,7 +161,7 @@ p.error {
 }
 
 
-@media (max-width: 590px) {
+/* @media (max-width: 590px) {
   #login-page {
     width: 500px;
   
@@ -171,4 +173,31 @@ p.error {
     width: 110%;
   }
  
+} */
+
+@media (max-width: 600px) {
+  #login-page,
+  #register-page {
+      padding: 0;
+  }
+
+  .container {
+      padding: 40px 0;
+  }
+
+  .btn.submit {
+      margin-bottom: 30px;
+  }
+
+  .field {
+      margin-top: 2rem;
+  }
+
+  .field>span {
+      font-size: initial;
+      position: relative;
+      display: block;
+      bottom: initial;
+      right: initial;
+  }
 }

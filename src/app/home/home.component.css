@@ -198,10 +198,31 @@ h1 {
 @media (max-width: 590px) {
   .home-furniture {
     margin-left: 0;
-   
+    padding: 20px 0;
+    margin: 20px 0;
+    float: none;
   }
   #home-page>h1 {
-    font-size: 30px;
+    font-size: 20px;
+  }
+  #welcome-people>#home-page {
+    margin-top: 20px;
+  }
+
+  .image-wrap {
+    width: 80%;
+    aspect-ratio: 1 / 1;
+  }
+
+  .welcome-message h2 {
+    text-align:center;
+    display: flex;
+  justify-content: center; 
+  align-items: center;     
+  height: 200px;  
+  font-size: 2rem;         
+  padding: 2px;
+           
   }
   
 }

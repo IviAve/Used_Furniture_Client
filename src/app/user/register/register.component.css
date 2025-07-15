@@ -124,7 +124,8 @@ p.error {
 
 #login-page {
   position: relative;
-  width: 650px;
+  width: 100%;
+  max-width: 650px;
   height: auto;
   border-radius: 20px;
   padding: 40px;
@@ -135,7 +136,8 @@ p.error {
 
 #register-page {
   position: relative;
-  width: 650px;
+  width: 100%;
+  max-width: 650px;
   height: auto;
   border-radius: 20px;
   padding: 40px;
@@ -268,7 +270,7 @@ p.error {
   border-color: red;
 }
 
-@media (max-width: 590px) {
+/* @media (max-width: 590px) {
   
   #register-page {
     width: 420px;
@@ -276,5 +278,32 @@ p.error {
   }
   label {
     width: 120%;
+  }
+} */
+
+@media (max-width: 600px) {
+  #login-page,
+  #register-page {
+      padding: 0;
+  }
+
+  .container {
+      padding: 40px 0;
+  }
+
+  .btn.submit {
+      margin-bottom: 30px;
+  }
+
+  .field {
+      margin-top: 2rem;
+  }
+
+  .field>span {
+      font-size: initial;
+      position: relative;
+      display: block;
+      bottom: initial;
+      right: initial;
   }
 }
